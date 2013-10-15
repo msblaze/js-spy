@@ -44,20 +44,20 @@ $('body').attr('class');
 
 3) Watch the console output (debug):
 ```
-// [Property Usage] $.fn
-// [Property Usage] $.fn.init
-// [Property Usage] $.fn.find
-// [Property Usage] $.find
-// [Property Usage] $.fn.pushStack
-// [Property Usage] $.fn.constructor
-// [Property Usage] $.fn
-// [Property Usage] $.fn.init
-// [Property Usage] $.merge
-// [Property Usage] $.fn.length
-// [Property Usage] $.fn.selector
-// [Property Usage] $.fn.attr
-// [Property Usage] $.attr
-// [Property Usage] $.access
-// [Property Usage] $.fn.length
-// [Property Usage] $.type
+// [Property Usage (0.0130)] $.fn
+// [Property Usage (0.0130)] $.fn.init 
+// [Property Usage (0.0130)] $.fn.find
+// [Property Usage (0.0020)] $.find
+// [Property Usage (0.0120)] $.fn.pushStack
+// [Property Usage (0.0150)] $.fn.constructor
+// [Property Usage (0.0130)] $.fn
+// [Property Usage (0.0130)] $.fn.init
+// [Property Usage (0.0020)] $.merge
+// [Property Usage (0.0080)] $.fn.length
+// [Property Usage (0.0090)] $.fn.selector
+// [Property Usage (0.0120)] $.fn.attr
+// [Property Usage (0.0010)] $.attr
+// [Property Usage (0.0020)] $.access
+// [Property Usage (0.0080)] $.fn.length
+// [Property Usage (0.0020)] $.type
 ```
