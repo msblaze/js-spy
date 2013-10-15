@@ -56,8 +56,8 @@ function spyProperties (debugNamespace, objectReference) {
         get: function () {
 
           // Write debug info into console
-          console.debug('[Property Usage (%time%)] %debugNamespace.%property'
-            .replace('%time%', (endTime - startTime).toFixed(4))
+          console.debug('[Property Usage (%timems)] %debugNamespace.%property'
+            .replace('%time', (endTime - startTime).toFixed(4))
             .replace('%debugNamespace', debugNamespace)
             .replace('%property', property)
           );
