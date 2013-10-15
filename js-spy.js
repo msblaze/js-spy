@@ -33,23 +33,34 @@
 function spyProperties (debugNamespace, objectReference) {
   // @TODO: Spy unless already spied
   // @TODO: Detect Object.defineProperty, Object.keys and Array.prototype.forEach
-  // @TODO: Maybe add an execution time to each debug information so the developer gets an understanding on how long does each part of the code execute
 
   Object.keys(objectReference).forEach(function (property) {
     try {
 
+      var startTime;
+      var endTime;
+
+      // Save start time using performance object
+      startTime = performance.now();
 
       // Store original value as __<propertyName>
       objectReference['__' + property] = objectReference[property];
       // Reset property to undefined
       objectReference[property]        = undefined;
 
+      // Save end time using performance object
+      endTime = performance.now();
+
       // Define spy (will write debug info into console and return original value)
       Object.defineProperty(objectReference, property, {
         get: function () {
 
           // Write debug info into console
-          console.debug('[Property Usage] %debugNamespace.%property'.replace('%debugNamespace', debugNamespace).replace('%property', property));
+          console.debug('[Property Usage (%time%)] %debugNamespace.%property'
+            .replace('%time%', (endTime - startTime).toFixed(4))
+            .replace('%debugNamespace', debugNamespace)
+            .replace('%property', property)
+          );
 
           // Return original value
           return objectReference['__' + property];
